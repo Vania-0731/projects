@@ -19,5 +19,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('grades.urls')),  # Ruta para las calificaciones
+    path('', include('grades.urls')),
 ]
