@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Recipes</h1>
+  <ul>
+    {% for recipe in recipes %}
+      <li>{{ recipe.name }} - Time: {{ recipe.cook_time }} min</li>
+    {% empty %}
+      <li>No recipes available.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
