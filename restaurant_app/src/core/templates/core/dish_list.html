@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Dishes</h1>
+  <ul>
+    {% for dish in dishes %}
+      <li>{{ dish.name }} - {{ dish.created_at|date:"d/m/Y" }}</li>
+    {% empty %}
+      <li>No dishes available.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
