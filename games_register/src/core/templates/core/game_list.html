@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Video Games</h1>
+  <ul>
+    {% for game in games %}
+      <li>{{ game.title }} - {{ game.genre }} ({{ game.release_date|date:"Y" }})</li>
+    {% empty %}
+      <li>No games available.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
