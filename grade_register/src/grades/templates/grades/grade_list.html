@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Grades</h1>
+  <ul>
+    {% for grade in grades %}
+      <li>
+        <strong>{{ grade.course }}:</strong> {{ grade.grade }} 
+        - <strong>{{ grade.status }}</strong>
+      </li>
+    {% empty %}
+      <li>No grades registered.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
